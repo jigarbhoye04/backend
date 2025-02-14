@@ -24,3 +24,4 @@ Things installed:
 - Express.js
 - eslint (for code quality)
 - nodemon (for auto-restart of server)
+- dotenv - a package to retrieve environment variables
