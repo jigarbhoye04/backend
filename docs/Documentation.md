@@ -119,12 +119,11 @@ So mongoose is an ODM Which means an Object-Document-Mapper. Since mongoDB is No
 ---
 
 
+> [!NOTE]
+> This section contains more detailed information about the project's functionality.
 
 <details>
   <summary>What Is?</summary>
-
-> [!NOTE]
-> This section contains more detailed information about the project's functionality.
 
 #### Middleware Functions
 [Middleware](/docs/what-is/middleware.md) functions are used to handle common tasks like logging, parsing requests, and error handling.
