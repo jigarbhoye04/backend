@@ -102,3 +102,34 @@ It ensures that the email follows a standard format like:
 If the email does **not** match the pattern, Mongoose will throw an error:  
 `"Please provide a valid email"`.
 
+---
+### Why i chose mongoose for the database?
+
+So mongoose is an ODM Which means an Object-Document-Mapper. Since mongoDB is NoSQL db and does not use relation db.
+
+- because i wanted a good schema enforcement(since mongodb is schema less but mongoose lets use define strich schemas)
+- i needed built-in validation
+- easy relationships & populating data (mongoose has such features)
+- our project has mostly CRUD operations.
+- and i am comfortable with OOP rather than complex raw SQL queries.
+- and because we can use middleware functions to do some stuff before or after certain events like save, find, etc.
+
+> i know this is going to be slower than native driver and requires additional learning curve but i think it is worth it.
+
+---
+
+
+
+<details>
+  <summary>What Is?</summary>
+
+> [!NOTE]
+> This section contains more detailed information about the project's functionality.
+
+#### Middleware Functions
+[Middleware](/docs/what-is/middleware.md) functions are used to handle common tasks like logging, parsing requests, and error handling.
+
+#### CORS
+[CORS](/docs/what-is/cors.md) (Cross-Origin Resource Sharing) is a security feature that controls how web pages can request resources from different domains.
+
+</details>

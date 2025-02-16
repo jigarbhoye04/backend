@@ -25,3 +25,8 @@ Things installed:
 - eslint (for code quality)
 - nodemon (for auto-restart of server)
 - dotenv - a package to retrieve environment variables
+- mongoose(ODM (Object-Document Mapper)) -  a package to interact with MongoDB
+
+
+> [!TIP]
+> To get more details about the Project functionality, please refer to the [Documentation](/docs/Documentation.md)
