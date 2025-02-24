@@ -26,6 +26,8 @@ Things installed:
 - nodemon (for auto-restart of server)
 - dotenv - a package to retrieve environment variables
 - mongoose(ODM (Object-Document Mapper)) -  a package to interact with MongoDB
+- bcrypt - a package to hash passwords
+- jsonwebtoken - a package to generate and verify JWTs (For Authentication)
 
 
 > [!TIP]
