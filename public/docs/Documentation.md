@@ -126,9 +126,9 @@ So mongoose is an ODM Which means an Object-Document-Mapper. Since mongoDB is No
   <summary>What Is?</summary>
 
 #### Middleware Functions
-[Middleware](/docs/what-is/middleware.md) functions are used to handle common tasks like logging, parsing requests, and error handling.
+[Middleware](/public/docs/what-is/middleware.md) functions are used to handle common tasks like logging, parsing requests, and error handling.
 
 #### CORS
-[CORS](/docs/what-is/cors.md) (Cross-Origin Resource Sharing) is a security feature that controls how web pages can request resources from different domains.
+[CORS](/public/docs/what-is/cors.md) (Cross-Origin Resource Sharing) is a security feature that controls how web pages can request resources from different domains.
 
 </details>
