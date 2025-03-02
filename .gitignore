@@ -63,3 +63,6 @@ typings/
 
 # IDE files
 .idea
+
+# Images
+desktop.ini

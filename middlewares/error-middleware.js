@@ -26,12 +26,10 @@ const errorMiddleware = (err, req, res, next) => {
          success: false,
          error: error.message || "Server Error",
       });
-
-
+      next(); //to move to the next middleware
    } catch (error) {
       next(error);
    }
 };
-
 
 export default errorMiddleware;
