@@ -30,5 +30,9 @@ Things installed:
 - jsonwebtoken - a package to generate and verify JWTs (For Authentication)
 
 
+Project Screenshots:
+[Images](/public/Images/screenshots.md)
+
+
 > [!TIP]
-> To get more details about the Project functionality, please refer to the [Documentation](/docs/Documentation.md)
+> To get more details about the Project functionality, please refer to the [Documentation](/public/docs/Documentation.md)
