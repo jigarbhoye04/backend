@@ -6,12 +6,14 @@ import subscriptionRouter from "./routes/subscriptions.routes.js";
 import connectToDatabase from "./database/mongodb.js";
 import errorMiddleware from "./middlewares/error-middleware.js";
 import cookieParser from "cookie-parser";
+import arcjetMiddleware from "./middlewares/arcjet.middleware.js";
 
 const app = express();
 
 app.use(express.json()); //middleware to parse incoming requests with JSON payloads
 app.use(express.urlencoded({ extended: true })); //middleware to parse incoming requests with urlencoded payloads, like forms dat sent from simple html forms to the server
 app.use(cookieParser()); //middleware to parse incoming requests with cookies to store user data
+app.use(arcjetMiddleware); //middleware to protect the app from common attacks like SQL injection, detect bots, and rate limit requests
 
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
