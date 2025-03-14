@@ -3,31 +3,37 @@ import aj from "../config/arcjet.js";
 const arcjetMiddleware = async (req, res, next) => {
    try {
       const decision = await aj.protect(req, { requested: 1 });
-      if (decision.isDenied) {
-         if (decision.reason.isRateLimit()) {
-            res.status(429).json({
-               success: false,
-               message: "Too Many Requests | Rate Limit Exceeded",
-            });
-         } else if (decision.reason.isBot()) {
-            res.status(403).json({
-               success: false,
-               message: "Bots Detected | No bots allowed",
-            });
-         } else {
-            res.status(403).json({
-               success: false,
-               message: "Forbidden",
-            });
+
+      if (decision?.isDenied()) {
+         const reason = decision?.reason;
+
+         if (reason?.isRateLimit()) {
+            return res
+               .status(429)
+               .json({ error: "Rate limit exceeded. Please try again later." });
+         }
+         if (reason?.isBot()) {
+            return res
+               .status(403)
+               .json({ error: "Bot activity detected. Access denied." });
          }
 
-         next();
+         return res
+            .status(403)
+            .json({
+               error: "Access denied. Contact support if this is an error.",
+            });
       }
+
+      next();
    } catch (error) {
-      console.error(error);
+      console.error("Arcjet Middleware Error:", {
+         error: error.message,
+         stack: error.stack,
+      });
+
       res.status(500).json({
-         success: false,
-         message: "Internal server error | Arcjet Middleware Error",
+         error: "Internal server error. Please try again later.",
       });
    }
 };
