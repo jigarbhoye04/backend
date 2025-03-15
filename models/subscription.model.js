@@ -33,19 +33,19 @@ const subscriptionSchema = new mongoose.Schema(
          // minLenght: [3, "Frequency must be at least 3 characters"],
          // maxLength: [7, "Frequency cannot be more than 7 characters"],
       },
-      categoty: {
+      category: {
          type: String,
          enum: [
-            "entertainment",
-            "education",
-            "health",
-            "finance",
-            "shopping",
-            "others",
+            "Entertainment",
+            "Education",
+            "Health",
+            "Finance",
+            "Shopping",
+            "Others",
          ],
          required: [true, "Please provide a category"],
       },
-      payhmentMethod: {
+      paymentMethod: {
          type: String,
          required: [true, "Please provide a payment method"],
          trim: true,
