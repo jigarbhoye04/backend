@@ -9,7 +9,7 @@ import {
 
 const subscriptionRouter = Router();
 
-subscriptionRouter.get("/", authorize, getAllSubscriptions);
+// subscriptionRouter.get("/", authorize, getAllSubscriptions); //by admin only
 
 subscriptionRouter.get("/:id", authorize, getSubscriptionDetails);
 
